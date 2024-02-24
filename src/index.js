@@ -3,6 +3,7 @@ const { ServerConfig } = require("./config");
 const apiRoutes = require("./routes");
 
 const app = express();
+const db = require("./models/index");
 
 app.use("/api", apiRoutes);
 

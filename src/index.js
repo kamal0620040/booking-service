@@ -1,9 +1,13 @@
 const express = require("express");
 const { ServerConfig } = require("./config");
 const apiRoutes = require("./routes");
+const bodyParser = require("body-parser");
 
 const app = express();
 const db = require("./models/index");
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/api", apiRoutes);
 

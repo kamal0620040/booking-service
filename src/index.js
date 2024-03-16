@@ -9,7 +9,7 @@ const db = require("./models/index");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/api", apiRoutes);
+app.use("/bookingservice/api", apiRoutes);
 
 app.listen(ServerConfig.PORT, () => {
   console.log(`Successfully started the server on PORT: ${ServerConfig.PORT}`);
